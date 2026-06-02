@@ -114,12 +114,12 @@ export default function Portfolio() {
 
   const displayedProjects = showAll ? allProjects : allProjects.slice(0, 4);
 
-  const fadeInUp = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: "-100px" },
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-  };
+const fadeInUp = {
+  initial: { opacity: 0, y: 50 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-100px" },
+  transition: { duration: 0.8 }
+} as const;
 
   const staggerContainer = {
     initial: {},
